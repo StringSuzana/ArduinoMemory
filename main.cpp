@@ -64,7 +64,7 @@ void playTone(int tonee, int duration, int ledIndex)
 
 void playKeypadNote(char keypadNumber, int duration)
 {
-  char numbers[] = {'0', '1', '2', '3', '4', '5', '6', '7'};
+  char numbers[] = { '1', '2', '3', '4', '5', '6', '7', '8'};
   int tones[] = {262, 294, 330, 349, 392, 440, 494, 523};
 
   if (keypadNumber == '*')
@@ -77,7 +77,7 @@ void playKeypadNote(char keypadNumber, int duration)
     {
       if (numbers[i] == keypadNumber)
       {
-        playTone(tones[i], duration, i-1);
+        playTone(tones[i], duration, i);
       }
     }
   }
